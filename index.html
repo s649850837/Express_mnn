@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Express 服务器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- 导航栏 -->
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <i class="fab fa-node-js text-green-600 text-2xl mr-3"></i>
+                        <span class="text-xl font-bold text-gray-800">Node.js Express 服务器</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-600">运行在端口 3000</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主要内容 -->
+        <main class="flex-1 flex items-center justify-center">
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="text-center">
+                    <div class="mb-8">
+                        <i class="fab fa-node-js text-green-600 text-6xl mb-4"></i>
+                        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                            欢迎使用 Node.js Express 服务器
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            这是一个使用 Express 框架构建的现代化 Node.js 应用
+                        </p>
+                    </div>
+
+                    <!-- 功能卡片 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-blue-600 text-3xl mb-4">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Express 服务器</h3>
+                            <p class="text-gray-600 text-sm">高性能的 Node.js Web 框架</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-green-600 text-3xl mb-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">RESTful API</h3>
+                            <p class="text-gray-600 text-sm">支持标准的 REST API 设计</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">数据服务</h3>
+                            <p class="text-gray-600 text-sm">提供 JSON 数据接口</p>
+                        </div>
+                    </div>
+
+                    <!-- 测试按钮 -->
+                    <div class="space-y-4">
+                        <button onclick="testAPI()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-bolt mr-2"></i>
+                            测试 API 接口
+                        </button>
+                        
+                        <div id="api-result" class="hidden bg-gray-100 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">API 响应结果：</h4>
+                            <pre id="result-content" class="text-left text-sm bg-gray-800 text-green-400 p-3 rounded overflow-x-auto"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <p>© 2024 Node.js Express 服务器. 使用 Express 框架构建</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        async function testAPI() {
+            try {
+                const response = await fetch('/api/data');
+                const data = await response.json();
+                
+                document.getElementById('result-content').textContent = JSON.stringify(data, null, 2);
+                document.getElementById('api-result').classList.remove('hidden');
+            } catch (error) {
+                document.getElementById('result-content').textContent = '错误: ' + error.message;
+                document.getElementById('api-result').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

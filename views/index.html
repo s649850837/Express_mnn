@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNN - 轻量级高性能推理引擎</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-blue-600">MNN</h1>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#features" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">特性</a>
+                        <a href="#demo" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">在线Demo</a>
+                        <a href="#workbench" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">工作台</a>
+                        <a href="#news" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">最新动态</a>
+                        <a href="#contact" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">联系我们</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://github.com/alibaba/MNN" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">MNN</h1>
+                <p class="text-xl md:text-2xl mb-8">轻量级高性能推理引擎</p>
+                <p class="text-lg mb-8 max-w-3xl mx-auto">
+                    阿里巴巴淘系技术开源的深度学习框架，支持了阿里巴巴70+场景下的AI应用。
+                    自开源起，MNN一直是推理引擎行业性能标杆，广受用户好评。
+                </p>
+                <div class="space-x-4">
+                    <a href="#workbench" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        立刻尝试 MNN
+                    </a>
+                    <a href="https://github.com/alibaba/MNN" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心特性 -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">核心特性</h2>
+                <p class="text-lg text-gray-600">让机器学习唾手可得</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">通用性</h3>
+                    <p class="text-gray-600">
+                        支持TensorFlow、Caffe、ONNX等主流模型格式，支持CNN、RNN、GAN等常用网络。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">高性能</h3>
+                    <p class="text-gray-600">
+                        极致优化算子性能，全面支持CPU、GPU、NPU，充分发挥设备算力。
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">易用性</h3>
+                    <p class="text-gray-600">
+                        转换、可视化、调试工具齐全，能方便地部署到移动设备和各种嵌入式设备中。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线Demo -->
+    <section id="demo" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">MNN 在线 Demo</h2>
+                <p class="text-lg text-gray-600">体验MNN的强大功能</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">YOLOv3 目标检测</h3>
+                    <p class="text-gray-600 text-sm mb-4">实时检测图像中的物体</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        立即体验
+                    </button>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-green-600 text-3xl mb-4">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Mobilenetv1 图像分类</h3>
+                    <p class="text-gray-600 text-sm mb-4">快速准确的图像分类</p>
+                    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                        立即体验
+                    </button>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">FaceDetection 多输入</h3>
+                    <p class="text-gray-600 text-sm mb-4">多维度人脸检测</p>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">
+                        立即体验
+                    </button>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Posenet 姿态检测</h3>
+                    <p class="text-gray-600 text-sm mb-4">人体姿态实时识别</p>
+                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+                        立即体验
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MNN工作台 -->
+    <section id="workbench" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">MNN 工作台</h2>
+                <p class="text-lg text-gray-600">一站式机器学习平台</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">让机器学习变得普惠</h3>
+                    <p class="text-gray-600 mb-6">
+                        从AI应用启蒙，到无门槛训练，一键多端部署，我们持续在演进！
+                        快来感受端智能全新力作一站式端侧AI平台 - MNN工作台。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>免费使用</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>3分钟训练高质量模型</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>秒级部署到设备端</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold mb-4">下载 MNN 工作台</h4>
+                    <div class="space-y-4">
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition">
+                            <i class="fab fa-apple mr-2"></i>
+                            MNN 工作台 For Mac
+                        </a>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition">
+                            <i class="fab fa-windows mr-2"></i>
+                            MNN 工作台 For Windows
+                        </a>
+                    </div>
+                    <div class="mt-4 text-sm text-gray-600">
+                        <p>支持 Mac 10.13 及以上设备</p>
+                        <p>支持 Windows 10 及以上设备</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section id="news" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">最新动态</h2>
+                <p class="text-lg text-gray-600">端智能最新进展一网打尽</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">劲爆干货 - 淘宝端智能演进和思考</h3>
+                    <p class="text-gray-600 text-sm mb-4">阿里端侧AI从探索尝试到逐步展开</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">阅读更多 →</a>
+                </article>
+                <article class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">淘宝端智能探索和实践</h3>
+                    <p class="text-gray-600 text-sm mb-4">告诉世界，前端也能做AI</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">阅读更多 →</a>
+                </article>
+                <article class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">端上开源推理引擎 MNN 核心技术解读</h3>
+                    <p class="text-gray-600 text-sm mb-4">深入解析MNN的核心技术架构</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">阅读更多 →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价 -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">这些人都在用</h2>
+                <p class="text-lg text-gray-600">真实用户的使用体验</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                            小诸
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">小诸 - 研究学者</h4>
+                            <p class="text-sm text-gray-600">研究学者</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "MNN推理引擎从去年刚开源我就开始用了。确实快，兼容性上也做的很好！niubility！"
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                            小川
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">小川 - 设计师</h4>
+                            <p class="text-sm text-gray-600">设计师</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "我是一名设计师...后来我了解到MNN工作台，只要简单几步就能训练一个自动从照片中识别宝贝的模型。"
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                            小郁
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">小郁 - 开发者</h4>
+                            <p class="text-sm text-gray-600">开发者</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "MNN工作台太好用了，我一个不懂机器学习算法的开发都瞬间训练出了一个游戏元素检测模型！"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">联系我们</h2>
+                <p class="text-lg text-gray-600">有任何问题或建议，欢迎联系我们</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">团队介绍</h3>
+                    <p class="text-gray-600 mb-6">
+ ......
